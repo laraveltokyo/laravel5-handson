@@ -12,5 +12,7 @@
 */
 
 Route::get('/', function () {
+	Log::debug('URL "/" にアクセスされました。');
+
     return view('welcome');
 });
