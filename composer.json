@@ -1,6 +1,6 @@
 {
-	"name": "laravel-plus/laravel5",
-	"description": "The Laravel Skeleton.",
+	"name": "laravel-plus/laravel5-handson",
+	"description": "The Laravel Skeleton for Hands-on event.",
 	"keywords": ["framework", "laravel"],
 	"type": "project",
 	"license": "MIT",
@@ -9,7 +9,8 @@
 		"laravel/framework": "5.1.*",
 		"laravel/socialite": "^2.0",
 		"laravel-plus/extension": "^2.4.1",
-		"barryvdh/laravel-debugbar": "^2.0"
+		"barryvdh/laravel-debugbar": "^2.0",
+		"guzzlehttp/guzzle": "^6.1"
 	},
 	"require-dev": {
 		"fabpot/php-cs-fixer": "~1.8",

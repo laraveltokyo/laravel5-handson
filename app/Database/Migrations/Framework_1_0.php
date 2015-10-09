@@ -9,27 +9,15 @@ use Illuminate\Database\Schema\Blueprint;
 class Framework_1_0 extends Migration
 {
     /**
-     * Define depends migration versions.
-     * ex) ['auth' => 1.0].
-     *
-     * @return array
-     */
-    public function dependsTo()
-    {
-        return [
-        ];
-    }
-
-    /**
      * Upgrade database.
      *
      * @return void
      */
     public function up()
     {
-        $this->createCacheTable();
         $this->createSessionsTable();
-        $this->createJobsTable();
+//        $this->createCacheTable();
+//        $this->createJobsTable();
     }
 
     /**
@@ -40,22 +28,8 @@ class Framework_1_0 extends Migration
     public function down()
     {
         Schema::dropIfExists('jobs');
-        Schema::dropIfExists('sessions');
         Schema::dropIfExists('cache');
-    }
-
-    /**
-     * Create 'cache' table.
-     *
-     * @return void
-     */
-    protected function createCacheTable()
-    {
-        Schema::create('cache', function (Blueprint $table) {
-            $table->string('key')->unique();
-            $table->text('value');
-            $table->integer('expiration');
-        });
+        Schema::dropIfExists('sessions');
     }
 
     /**
@@ -69,6 +43,20 @@ class Framework_1_0 extends Migration
             $table->string('id')->unique();
             $table->text('payload');
             $table->integer('last_activity');
+        });
+    }
+
+    /**
+     * Create 'cache' table.
+     *
+     * @return void
+     */
+    protected function createCacheTable()
+    {
+        Schema::create('cache', function (Blueprint $table) {
+            $table->string('key')->unique();
+            $table->text('value');
+            $table->integer('expiration');
         });
     }
 
