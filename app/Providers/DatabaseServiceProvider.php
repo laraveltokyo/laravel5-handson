@@ -18,5 +18,19 @@ class DatabaseServiceProvider extends ServiceProvider
         $this->migrations('framework', [
             '1.0' => Migrations\Framework_1_0::class,
         ]);
+
+        //@@ Step 17 @@//
+        //{{
+        $this->migrations('app', [
+            '1.0' => Migrations\App_1_0::class,
+        ]);
+        //}}
+
+        //@@ Step 20 @@//
+        //{{
+        $this->seeds([
+            'test' => Seeds\Test::class,
+        ], 'test');
+        //}}
     }
 }
