@@ -15,6 +15,10 @@ Laravel公式のひな形プロジェクトは、[laravel/laravel](https://githu
 $ composer create-project laravel-plus/laravel5-handson <directory>
 ```
 
+### 完成版
+
+[全28ステップ実装済みのソース](https://github.com/laraveltokyo/laravel5-handson/archive/finish.zip)はこちらからダウンロードできます。
+
 ### ライセンス
 
 The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
